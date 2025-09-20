@@ -1,5 +1,5 @@
 import React from 'react'
-import "../Pizza/Pizzabox.css"
+import "./Pizzabox.css"
 
 const PizzaBox = () => {
   return (

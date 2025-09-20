@@ -1,9 +1,14 @@
 import './App.css';
-import PizzaBox from './components/Pizza/PizzaBox';
+import PizzaBox from './components/PizzaBase/PizzaBox';
+import { Provider } from 'react-redux'
+import store from './components/redux/store';
 function App() {
   return (
     <div className="App">
-      <PizzaBox />
+      <Provider store={store}>
+        <PizzaBox />
+      </Provider>
+      
     </div>
   );
 }
