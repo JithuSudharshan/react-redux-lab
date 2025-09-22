@@ -1,7 +1,7 @@
 import { BURGER_BUNS } from "./BurgerTypes";
 
 const initialstate = {
-    burgerBun:750
+    burgerBuns:750
 }
 
 const burgerReducer = (state=initialstate,action)=>{
@@ -9,7 +9,7 @@ const burgerReducer = (state=initialstate,action)=>{
         case BURGER_BUNS:
             return {
                 ...state,
-                burgerBun:state.burgerBun-1
+                burgerBuns:state.burgerBuns-1
             }
         default:
             return state;

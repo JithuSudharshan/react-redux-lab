@@ -1,16 +1,16 @@
 import React from 'react'
-import "./Pizzabox.css"
-import orderPizza from '../redux/pizza/PizzaActions'
+import "./BurgerBox.css"
+import orderBurger from '../redux/burger/BurgerActions'
 import { connect } from 'react-redux' //importing connect from recat-redux library
 
 
 //pizzabox react component
-const PizzaBox = (props) => {
+const BurgerBox = (props) => {
 
   return (
     <div className='main-div'>
-      <h1>No of pizzabases available:{props.pizzabase}</h1>
-      <button onClick={props.orderPizza}  >Order Pizza</button>
+      <h1>No of Burger-Buns available:{props.burgerBuns}</h1>
+      <button onClick={props.orderBurger}  >Order Pizza</button>
     </div>
   )
 }
@@ -21,7 +21,7 @@ const PizzaBox = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    pizzabase:state.pizza.pizzaBase  // taking data from store
+    burgerBuns:state.burger.burgerBuns // taking data from store
   }
 }
 
@@ -32,9 +32,9 @@ const mapStateToProps = (state) => {
 
 const mapDispacthToState= (dispatch) =>{
   return {
-    orderPizza: ()=> dispatch(orderPizza())  // making action available as a prop
+    orderBurger: ()=> dispatch(orderBurger())  // making action available as a prop
   }
 }
 
 // connect : takes your component and gives it access to Redux state and actions as props
-export default connect(mapStateToProps,mapDispacthToState)(PizzaBox)
+export default connect(mapStateToProps,mapDispacthToState)(BurgerBox)
