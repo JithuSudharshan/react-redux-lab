@@ -1,7 +1,7 @@
-import { ORDER_PIZZA } from "./PizzaActions";
+import { ORDER_PIZZA } from "./PizzaTypes";
 
 const initialState = {
-  pizzabase: 1000,
+  pizzaBase: 1000,
 };
 
 const pizzaReducer = (state = initialState, action) => {
@@ -9,10 +9,10 @@ const pizzaReducer = (state = initialState, action) => {
     case ORDER_PIZZA:
       return {
         ...state,
-        pizzabase: state.pizzabase - 1,
+        pizzaBase: state.pizzaBase - 1,
       };
     default:
-      state;
+      return state;
   }
 };
 

@@ -1,4 +1,4 @@
-import { ORDER_PIZZA } from "./PizzaTypes";
+import { ORDER_PIZZA } from "./PizzaTypes.js";
 
 const orderPizza = () => {
   return {
