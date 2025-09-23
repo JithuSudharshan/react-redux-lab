@@ -12,11 +12,20 @@
   font-size: 16px;
   border: none;
   border-radius: 6px;
-  background-color: #4caf50;
+  background-color: #b042e7;
   color: white;
   cursor: pointer;
 }
 
+.input-field{
+  width: 440px;
+  height: 30px; 
+  outline: auto;
+  border: 2px;
+  border-color: black;
+  border-radius: 5px;
+}
+
 .main-div button:hover {
-  background-color: #45a049;
+  background-color: #b042e7;
 }

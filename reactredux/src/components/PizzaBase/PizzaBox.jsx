@@ -10,7 +10,7 @@ const PizzaBox = (props) => {
   return (
     <div className='main-div'>
       <h1>No of pizzabases available:{props.pizzabase}</h1>
-      <button onClick={props.orderPizza}  >Order Pizza</button>
+      <button onClick={props.orderPizza}  >Order 1 Pizza</button>
     </div>
   )
 }

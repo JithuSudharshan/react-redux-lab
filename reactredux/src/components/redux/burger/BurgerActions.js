@@ -1,8 +1,9 @@
 import { ORDER_BURGER } from "./BurgerTypes";
 
-const orderBurger=()=>{
+const orderBurger=(number=1)=>{
     return {
-        type:ORDER_BURGER
+        type:ORDER_BURGER,
+        payload:number
     }
 }
 export default orderBurger;
