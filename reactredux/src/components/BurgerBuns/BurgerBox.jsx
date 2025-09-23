@@ -8,7 +8,7 @@ import { connect } from 'react-redux' //importing connect from recat-redux libra
 const BurgerBox = (props) => {
 
   return (
-    <div className='main-div'>
+    <div className='burger-main-div'>
       <h1>No of Burger-Buns available:{props.burgerBuns}</h1>
       <button onClick={props.orderBurger}  >Order 1 burger</button>
     </div>

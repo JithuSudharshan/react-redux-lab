@@ -1,4 +1,4 @@
-.main-div {
+.pizza-main-div {
   display: flex;
   flex-direction: column;  
   justify-content: center;  
@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-.main-div button {
+.pizza-main-div button {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
@@ -17,6 +17,6 @@
   cursor: pointer;
 }
 
-.main-div button:hover {
+.pizza-main-div button:hover {
   background-color: #45a049;
 }
