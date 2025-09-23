@@ -1,12 +1,28 @@
-import { createStore,applyMiddleware} from "redux"; //ported applyMiddleWareim
+// Importing createStore and applyMiddleware from Redux
+// createStore → creates the Redux store
+// applyMiddleware → allows adding extra functionality (middlewares)
+import { createStore, applyMiddleware } from "redux"; 
+
+// Import rootReducer (combined reducer for pizza, burger, product, etc.)
 import rootReducer from "./rootReducers";
-import logger from "redux-logger" // imported logger middleWare
+
+// Import logger middleware → logs every action and the updated state (useful for debugging)
+import logger from "redux-logger" 
+
+// Import Redux DevTools → allows debugging state from browser extension
 import { composeWithDevTools } from 'redux-devtools-extension';
 
+// Import thunk middleware → allows writing async action creators
+import { thunk } from "redux-thunk"
 
-// create store using pizzaReducer (used createStore for study purpose only)
-// passed applyMiddleware as second arguement to createstore
-// updated 2nd arguement for redux-dev tools extension
-const store = createStore(rootReducer,composeWithDevTools(applyMiddleware(logger))); //passed logger as arguement to applyMiddleWare
+// Create the Redux store
+// rootReducer → combined reducer
+// composeWithDevTools → integrates middleware with Redux DevTools
+// applyMiddleware → adds logger + thunk as middlewares
+const store = createStore(
+    rootReducer,
+    composeWithDevTools(applyMiddleware(logger, thunk)) // middlewares added here
+); 
 
-export default store; // make store available to the app
+// Export store so it can be passed into <Provider> in index.js
+export default store; 

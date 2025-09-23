@@ -5,6 +5,7 @@ import store from './components/redux/store';
 // import HooksContainer from './components/HooksContainer/HooksContainer';
 import BurgerBox from './components/BurgerBuns/BurgerBox';
 import CustomerChoice from '../src/components/CustomerChoice/CustomerChoice';
+import AsyncProducts from './components/AsyncProducts/AsyncProducts';
 
 function App() {
   return (
@@ -12,10 +13,11 @@ function App() {
       {/* Provider makes the Redux store available to all components */}
       <Provider store={store}>
         {/*Component connected to Redux*/}
-        <PizzaBox />   
+        {/* <PizzaBox />    */}
         {/* <HooksContainer/>  */}
-        <BurgerBox />
-        <CustomerChoice />
+        {/* <BurgerBox />
+        <CustomerChoice /> */}
+        <AsyncProducts />
       </Provider>
     </div>
   );
