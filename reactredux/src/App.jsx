@@ -2,9 +2,9 @@ import './App.css';
 import PizzaBox from './components/PizzaBase/PizzaBox';
 import { Provider } from 'react-redux';
 import store from './components/redux/store';
-// import HooksContainer from './components/redux/HooksContainer';
+import HooksContainer from './components/HooksContainer/HooksContainer';
 import BurgerBox from './components/BurgerBuns/BurgerBox';
-import CustomerChoice from './components/redux/CustomerChoice/CustomerChoice';
+import CustomerChoice from '../src/components/CustomerChoice/CustomerChoice';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Provider store={store}>
         {/*Component connected to Redux*/}
         <PizzaBox />   
-        {/* <HooksContainer/>  */}
+        <HooksContainer/> 
         <BurgerBox />
         <CustomerChoice />
       </Provider>

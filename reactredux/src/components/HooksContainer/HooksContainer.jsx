@@ -1,10 +1,10 @@
 import React from 'react'
-import "../PizzaBase/Pizzabox.css"
+import "./HooksContainer.css"
 import { useSelector, useDispatch } from 'react-redux' 
 // useSelector ~ replaces mapStateToProps
 // useDispatch ~ replaces mapDispatchToProps
 
-import orderPizza from './pizza/PizzaActions'
+import orderPizza from '../redux/pizza/PizzaActions'
 
 // pizzabox react component
 const HooksContainer = () => {
@@ -18,7 +18,7 @@ const HooksContainer = () => {
     const dispatch = useDispatch()
 
     return (
-        <div className='main-div'>
+        <div className='hooks-main-div'>
             <h1>No of pizzabases available: {pizzaBase}</h1>
             
             {/*     dispatching an action with useDispatch

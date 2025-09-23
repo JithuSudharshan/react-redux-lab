@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./CustomerChoice.css"
-import orderBurger from '../burger/BurgerActions' // import action creator function
+import orderBurger from '../redux/burger/BurgerActions' // import action creator function
 import { connect } from 'react-redux' // connect allows React component to interact with Redux store
 
 // CustomerChoice React component

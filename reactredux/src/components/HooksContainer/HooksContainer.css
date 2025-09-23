@@ -1,0 +1,22 @@
+.hooks-main-div {
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;  
+  align-items: center;             
+  text-align: center;
+}
+
+.hooks-main-div button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.hooks-main-div button:hover {
+  background-color: #45a049;
+}
