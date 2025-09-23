@@ -18,7 +18,7 @@ const HooksContainer = () => {
     const dispatch = useDispatch()
 
     return (
-        <div className='hooks-main-div'>
+        <div className='hooks-  main-div'>
             <h1>No of pizzabases available: {pizzaBase}</h1>
             
             {/*     dispatching an action with useDispatch
