@@ -1,1 +1,1 @@
-export const BURGER_BUNS= "BURGER_BUNS"
+export const ORDER_BURGER = "ORDER_BURGER"

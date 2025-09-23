@@ -1,8 +1,8 @@
-import { BURGER_BUNS } from "./BurgerTypes";
+import { ORDER_BURGER } from "./BurgerTypes";
 
 const orderBurger=()=>{
     return {
-        type:BURGER_BUNS
+        type:ORDER_BURGER
     }
 }
 export default orderBurger;

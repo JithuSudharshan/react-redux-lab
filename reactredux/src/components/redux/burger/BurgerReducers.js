@@ -1,4 +1,4 @@
-import { BURGER_BUNS } from "./BurgerTypes";
+import { ORDER_BURGER } from "./BurgerTypes";
 
 const initialstate = {
     burgerBuns:750
@@ -6,7 +6,7 @@ const initialstate = {
 
 const burgerReducer = (state=initialstate,action)=>{
     switch (action.type) {
-        case BURGER_BUNS:
+        case ORDER_BURGER:
             return {
                 ...state,
                 burgerBuns:state.burgerBuns-1
