@@ -1,15 +1,18 @@
 import React, { useEffect } from 'react'
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 import { fetchProducts } from '../redux/products/productsAction'
+import { useDispatch, useSelector } from 'react-redux'
 
 // Functional component for displaying products
 // It receives "productsData" (state) and "fetchProducts" (action) as props
-const AsyncProducts = ({ productsData, fetchProducts }) => {
+const AsyncProducts = () => {
 
+    const productsData = useSelector(state=>state.product)
+    const dispatch = useDispatch();
     // useEffect runs when the component mounts
     // Purpose: trigger the async action (fetchProducts) to load data from API/backend
     useEffect(() => {
-        fetchProducts();
+        dispatch(fetchProducts()); //use the dispacth isntance from useDispatch()
     }, []) // [] → ensures it runs only once when component is mounted
 
     return (
@@ -37,21 +40,22 @@ const AsyncProducts = ({ productsData, fetchProducts }) => {
     )
 }
 
-// mapStateToProps
-// Purpose: take data from Redux store and pass it into the component as props
-const mapStateToProps = (state) => {
-    return {
-        productsData: state.product // "product" reducer holds loading, error, and products
-    }
-}
+// // mapStateToProps
+// // Purpose: take data from Redux store and pass it into the component as props
+// const mapStateToProps = (state) => {
+//     return {
+//         productsData: state.product // "product" reducer holds loading, error, and products
+//     }
+// }
 
-// mapDispatchToProps
-// Purpose: make actions available as props to the component
-const mapDispatchToProps = (dispatch) => {
-    return {
-        fetchProducts: () => dispatch(fetchProducts()) // dispatch async action
-    }
-}
+// // mapDispatchToProps
+// // Purpose: make actions available as props to the component
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         fetchProducts: () => dispatch(fetchProducts()) // dispatch async action
+//     }
+// }
 
 // connect() links the component with Redux store (state + actions)
-export default connect(mapStateToProps, mapDispatchToProps)(AsyncProducts)
+// export default connect(mapStateToProps, mapDispatchToProps)(AsyncProducts)
+export default AsyncProducts
